@@ -1,0 +1,73 @@
+%YAML 1.2
+---
+
+# INFO
+id: Xamarin.FFImageLoading
+name: "FFImageLoading Plugin"
+version: 2.1.0
+summary: "Library to load images quickly and easily."
+publisher: "Fabien Molinet & Daniel Luberda"
+publisher-url: https://github.com/luberda-molinet/FFImageLoading
+src-url: https://github.com/luberda-molinet/FFImageLoading
+
+# DOCS
+details: Details.md
+getting-started: GettingStarted.md
+license: ../../License.md
+# screenshots: 
+#   - screenshots/screenshot1.png
+icons: 
+  - "icon_128x128.png": "https://cdn4.iconfinder.com/data/icons/flat-services-icons/128/startup.png"
+  - "icon_512x512.png": "https://cdn4.iconfinder.com/data/icons/flat-services-icons/512/startup.png"
+
+# LIBRARY
+is_shell: true
+no_build: true
+skip_docs: true
+libraries:
+  wp8:
+    - ../../source/FFImageLoading.WinSL/bin/Release/FFImageLoading.dll
+    - ../../source/FFImageLoading.WinSL/bin/Release/FFImageLoading.Platform.dll
+  wp81:
+    - ../../source/FFImageLoading.WinSL/bin/Release/FFImageLoading.dll
+    - ../../source/FFImageLoading.WinSL/bin/Release/FFImageLoading.Platform.dll
+  android:
+    - ../../source/FFImageLoading.Droid/bin/Release/FFImageLoading.dll
+    - ../../source/FFImageLoading.Droid/bin/Release/FFImageLoading.Platform.dll
+  ios-unified:
+    - ../../source/FFImageLoading.Touch/bin/Release/FFImageLoading.dll
+    - ../../source/FFImageLoading.Touch/bin/Release/FFImageLoading.Platform.dll
+  win8:
+    - ../../source/FFImageLoading.Windows/bin/Release/FFImageLoading.dll
+    - ../../source/FFImageLoading.Windows/bin/Release/FFImageLoading.Platform.dll
+  wpa81:
+    - ../../source/FFImageLoading.Windows/bin/Release/FFImageLoading.dll
+    - ../../source/FFImageLoading.Windows/bin/Release/FFImageLoading.Platform.dll
+  uap:
+    - ../../source/FFImageLoading.Windows/bin/Release/FFImageLoading.dll
+    - ../../source/FFImageLoading.Windows/bin/Release/FFImageLoading.Platform.dll
+packages:
+  wp8: "Xamarin.FFImageLoading, Version=2.1.0"
+  wp81: "Xamarin.FFImageLoading, Version=2.1.0"
+  android: "Xamarin.FFImageLoading, Version=2.1.0"
+  ios-unified: "Xamarin.FFImageLoading, Version=2.1.0"
+  win8: "Xamarin.FFImageLoading, Version=2.1.0"
+  wpa81: "Xamarin.FFImageLoading, Version=2.1.0"
+  uap: "Xamarin.FFImageLoading, Version=2.1.0"
+local-nuget-repo: "../../"
+
+# SAMPLES
+samples: 
+  - name: "Android Sample"
+    path: "../../samples/ImageLoading.Sample/Simple.Android.Sample.sln"
+    removeProjects:
+      - FFImageLoading
+      - FFImageLoading.Droid
+      - FFImageLoading.Transformations.Droid
+    installNuGets:
+      - project: Simple.Android.Sample
+        packages:
+          - Xamarin.FFImageLoading
+          - Xamarin.FFImageLoading.Transformations
+
+...

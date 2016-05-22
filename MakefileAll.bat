@@ -44,4 +44,8 @@ nuget pack source/Xamarin.FFImageLoading.nuspec
 nuget pack source/Xamarin.FFImageLoading.Transformations.nuspec
 nuget pack source/Xamarin.FFImageLoading.Forms.nuspec
 
+echo Packaging Xamarin Components
+
+xamarin-component package component/Xamarin.FFImageLoading --output .
+
 echo All done.
